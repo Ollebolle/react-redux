@@ -14,7 +14,7 @@ class ItemList extends Component {
     const {
       hasErrored,
       isLoading,
-      items
+      items = []
     } = this.props
     if (hasErrored) {
       return <p>Sorry! There was an error loading the items</p>
