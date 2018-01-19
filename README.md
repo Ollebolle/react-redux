@@ -9,6 +9,7 @@
 - [React-router](https://github.com/ReactTraining/react-router)
 - [React-router-redux](https://github.com/reactjs/react-router-redux)
 - [Redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension)
+- [Redux-logger](https://github.com/evgenyrodionov/redux-logger)
 - [SASS](http://sass-lang.com)
 - [AirBnB eslint config](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
 - [React-hot-loader](https://github.com/gaearon/react-hot-loader)

@@ -4,11 +4,16 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import createHistory from 'history/createBrowserHistory'
 import { Route } from 'react-router'
 import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
+import { createLogger } from 'redux-logger'
 
 import rootReducer from '../reducers'
 
 export const history = createHistory()
 const routeMiddleware = routerMiddleware(history)
+
+const logger = createLogger({
+  collapsed: true
+})
 
 const getProdStore = initialState => (
   createStore(
@@ -30,6 +35,7 @@ const getDevStore = initialState => (
     initialState,
     composeWithDevTools(
       applyMiddleware(
+        logger,
         thunk,
         routeMiddleware
       )
