@@ -6,29 +6,28 @@ import {
   Switch
 } from 'react-router-dom'
 import { Provider } from 'react-redux'
+import { ConnectedRouter } from 'react-router-redux'
 import routes from './routes'
-import configureStore from './store/configureStore'
+import configureStore, { history } from './store/configureStore'
 
 const store = configureStore()
 
 const App = () => (
   <Provider store={store}>
-    <HashRouter>
+    <ConnectedRouter history={history}>
       <main className="container">
-        <Switch>
-          {
-            routes.map((route, index) => (
-              <Route
-                exact
-                path={ route.url }
-                component={ route.component }
-                key={ route.url }
-              />
-            ))
-          }
-        </Switch>
+        {
+          routes.map((route, index) => (
+            <Route
+              exact
+              path={ route.url }
+              component={ route.component }
+              key={ route.url }
+            />
+          ))
+        }
       </main>
-    </HashRouter>
+    </ConnectedRouter>
   </Provider>
 )
 
