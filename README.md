@@ -1,6 +1,6 @@
 # React-redux template
 
-## Tech used:
+## Includes
 - [Webpack](https://webpack.js.org)
 - [Webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard)
 - [React](https://reactjs.org)
